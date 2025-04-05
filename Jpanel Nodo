@@ -1,0 +1,12 @@
+public class Nodo {
+    int x,y;
+    Nodo siguiente;
+
+    public Nodo (int x, int y) {
+        this.x = x;                //instanciar, estoy en esta parte sino con el new
+        this.y = y;
+        this.siguiente = null;
+    }
+
+
+}
