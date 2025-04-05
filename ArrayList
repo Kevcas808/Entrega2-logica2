@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        System.out.println("Hello, World!");
+
+        ArrayList<Integer> numeros = new ArrayList<>();     //clase abstracta 
+
+        numeros.add(20);
+        numeros.add(0);
+        numeros.add(2);                      //. como se establezca el orden
+        numeros.add(30);
+        numeros.add(0,88);       //. se pone coma para ubicar la posicion 
+        numeros.set(2, 50);      //. Se cambia de elementos subescrito
+        numeros.remove(1);               //. Remueve un elemento
+
+        boolean existe = numeros.contains(88);
+        System.out.println("La lista tiene el 88  "+existe);
+        int indice = numeros.indexOf(30);     //buscar posicion
+        System.out.println("El indice del numero 30 es:  "+indice);
+
+        System.out.println("El tamaño de la lista es :"+ numeros.size());       //Para consultar el tamaño
+        for (int numero = 0; numero < numeros.size(); numero++) {
+            System.out.println("El elemento con indice "+ numero + " : "+ numeros.get(numero));   //recorremos el arraylist,,,    posicion
+        }
+
+       for (int numero : numeros) {                                //nos recorre la lista y nos muestra los valores    forich simplificado
+            System.out.println("numeros : "+ numero);              //numero 
+       }
+
+       int numero = 0;
+       while (numero < numeros.size()){
+        System.out.println("Numeros con el while:"+numeros.get(numero));
+        numero++;
+       }
+
+
+        System.out.println(" La lista de numeros es:"+ numeros);
+
+    }//arraylist                            linkedlist, listas enlazadas           vector similar a arraylist pero sincronizado   entornos multi tareas
+    // que es un hilo tareas en paralelo    se ejecuta en hilos diferentes para que funcione todo
+    // igual nucleos de computador ,,,, hilo pestaña 
+}
