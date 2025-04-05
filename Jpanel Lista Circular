@@ -1,0 +1,21 @@
+public class ListaCircular {
+    private Nodo cabeza = null;   // Lista Inicio
+    private Nodo cola = null;    // Lista Fin
+
+    public void insertar(int x, int y) {     // () Atributos = variables
+        Nodo nuevo = new Nodo(x,y);      // Parametros
+        if (cabeza== null){
+            cabeza = nuevo;
+            cola = nuevo;
+            cabeza.siguiente = cabeza;
+        } else {
+            cola.siguiente = nuevo;
+            nuevo.siguiente = cabeza;
+            cola = nuevo;
+        }
+    } 
+    public Nodo getCabeza() {
+        return cabeza;
+    }
+
+}
